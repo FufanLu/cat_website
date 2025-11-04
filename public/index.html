@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Internet</title>
+    <link rel="stylesheet" href="./index-styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__content">
+            <a href="index.html" class="header__logo-link">
+                <img src="./images/logo.jpg" alt="a black and white cat lying on a table" class="header__logo">
+            </a>
+            <h1 class="header__title">Cats Internet</h1>
+            <button class="hamburger-btn" aria-label="open navigation menu">☰</button>
+        </div>
+        
+        <nav class="header__nav" aria-label="main navigation">
+            <a href="home.html" class="header__nav-link">Home</a>
+            <a href="index.html" class="header__nav-link">Famous Cats</a>
+            <a href="cats.html" class="header__nav-link">Cats Events</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <p class="card_name">John</p>
+                <img src="./images/card1.png" alt="a cat staring at the camera in the dark" class="card__image">
+                <p class="card__description">This orange cat is chubby and spends most of its time lazily lounging
+                    <button class="card__subscribe-btn" type="button">Subscribe</button>
+                </p>
+            </div>
+            <div class="card">
+                <p>Jack</p>
+                <img src="./images/card2.png" alt="an orange cat sleeping on the floor with its eyes closed"
+                    class="card__image">
+                <p class="card__description">This long-haired cat gracefully grooms itself,
+                    <button class="card__subscribe-btn" type="button">Subscribe</button>
+                </p>
+            </div>
+            <div class="card">
+                <p class="card_name">Frank</p>
+                <img src="./images/card3.png" alt="a kitten sitting quietly on the sofa" class="card__image">
+                <p class="card__description">The little black cat's eyes sparkle like two
+                    <button class="card__subscribe-btn" type="button">Subscribe</button>
+                </p>
+            </div>
+            <div class="card">
+                <p class="card_name">Bug</p>
+                <img src="./images/card4.png" alt="a kitten peeks out from under the cushions on the couch"
+                    class="card__image">
+                <p class="card__description">The kitten has just learned to walk,
+                    <button class="card__subscribe-btn" type="button">Subscribe</button>
+                </p>
+            </div>
+            <div class="card">
+                <p class="card__name">Ramy</p>
+                <img src="./images/card5.png" alt="a cat enjoys being caressed by its owner and closes its eyes"
+                    class="card__image">
+                <p class="card__description">The tabby cat stretches lazily,
+                    <button class="card__subscribe-btn" type="button">Subscribe</button>
+                </p>
+            </div>
+            <div class="card">
+                <p class="card__name">Tiff</p>
+                <img src="./images/card6.png"
+                    alt="a cat sits slumped in a chair and looks at the camera as if it's tired" class="card__image">
+                <p class="card__description">The playful kitten pounces on anything that moves,
+                    <button class="card__subscribe-btn" type="button">Subscribe</button>
+                </p>
+            </div>
+        </div>
+
+        <dialog class="modal" id="modal">
+            <h2>Subscribe to the Latest News</h2>
+            <form class="register-form" id="register-form" action="/subscribe" method="POST">
+                <p class="required-hint">Fields marked (required) are mandatory</p>
+                <label class="form-content" for="email">
+                    <span>Email (* required)</span>
+                    <input id="email" name="email" type="text">
+                    <span class="error-message email-error"></span>
+                </label>
+                <label class="form-content" for="confirm-email">
+                    <span>Confirm Email (* required)</span>
+                    <input id="confirm-email" name="confirm-email" type="text">
+                    <span class="error-message confirmation-error"></span>
+                </label>
+                <div class="modal-btn">
+                    <button class="subscribe-button submit" type="submit">Subscribe</button>
+                    <button class="subscribe-button cancel" type="button" id="modal-close">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+
+    <footer>
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./contact-us.html">Contact Us</a>
+        <a href="./terms-of-service.html">Terms of Service</a>
+        <a href="./join-us.html">Join Us</a>
+    </footer>
+
+    <script src="./indexScript.js"></script>
+</body>
+
+</html>

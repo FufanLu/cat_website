@@ -1,0 +1,259 @@
+body {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.2;
+    font-size: 1rem;
+}
+
+.skiplink {
+    position: absolute;
+
+    top: -1000px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.skiplink:focus {
+    position: absolute;
+
+    top: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.header {
+    display: block;
+
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+
+    text-align: center;
+
+    background-color: burlywood;
+}
+
+.header__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.header__logo-link {
+    display: flex;
+    align-items: center;
+
+    grid-column: span 3;
+
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.header__logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header__title {
+    grid-column: 5 / 9;
+
+    margin: 0;
+
+    font-size: 24px;
+    text-align: center;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+
+    gap: 40px;
+}
+
+.header__nav-link {
+    text-decoration: none;
+
+    font-size: 18px;
+
+    color: black;
+}
+
+.header__nav-link:hover {
+    text-decoration: underline;
+}
+
+.hamburger-btn {
+    display: none;
+
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    background: none;
+    border: none;
+
+    font-size: 24px;
+}
+
+main {
+    display: block;
+
+    overflow: hidden;
+
+    background-color: papayawhip;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+    background-color: #eee;
+}
+
+.card-story {
+    flex-direction: row-reverse;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__image {
+    flex: 0;
+
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+
+    flex-shrink: 0;
+}
+
+.card__title {
+    margin-bottom: 10px;
+}
+
+.card__text {
+    flex: 1;
+
+    text-align: left;
+    line-height: 1.5;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 10px;
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: burlywood;
+}
+
+footer a {
+    grid-column: span 3;
+
+    padding: 10px;
+
+    transition: background-color 0.3s ease;
+}
+
+footer a:hover {
+    background-color: #eee;
+}
+
+@media (max-width: 44rem) {
+    .hamburger-btn {
+        display: block;
+
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        background: none;
+
+        font-size: 36px;
+
+        z-index: 100;
+    }
+
+    .hamburger-btn span {
+        display: block;
+
+        width: 25px;
+        height: 3px;
+
+        margin: 5px 0;
+
+        background-color: #333;
+    }
+
+    .header__nav {
+        display: none;
+
+        position: absolute;
+        top: 60px;
+        right: 20px;
+
+        width: auto;
+        padding: 10px 20px;
+
+        background: burlywood;
+
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .header__nav.active {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .card {
+        display: block;
+
+        padding: 10px;
+    }
+
+    .card__image {
+        float: left;
+
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    .card__content {
+        display: block;
+
+        padding: 3px;
+
+        text-align: justify;
+    }
+
+    .card-story img {
+        float: right;
+    }
+
+    footer a {
+        grid-column: span 12;
+    }
+}
